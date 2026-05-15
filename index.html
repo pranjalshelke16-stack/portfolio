@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pranjal Shelke| Portfolio</title>
+
+<style>
+    /* FLIP CARD */
+
+
+/* FLIP CARD */
+.flip-card {
+  width: 220px;
+  height: 220px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+/* HOVER EFFECT */
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* FRONT & BACK */
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+}
+
+/* IMAGE FIX */
+.flip-front img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+/* BACK SIDE */
+.flip-back {
+  background: #020617;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transform: rotateY(180deg);
+
+}
+body {
+ margin: 0;
+ font-family: 'Poppins', sans-serif;
+ background: #0f172a;
+ color: white;
+}
+
+/* NAVBAR */
+nav {
+ display: flex;
+ justify-content: space-between;
+ padding: 15px 40px;
+ background: #020617;
+}
+nav h2 {
+ color: #38bdf8;
+}
+nav ul {
+ display: flex;
+ gap: 20px;
+ list-style: none;
+}
+nav a {
+ color: white;
+ text-decoration: none;
+}
+nav a:hover {
+ color: #38bdf8;
+}
+
+/* HOME */
+.home {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ padding: 60px 20px;
+ gap: 40px;
+}
+.home img {
+ width: 220px;
+ border-radius: 15px;
+ box-shadow: 0 0 20px #38bdf8;
+}
+.home-text {
+ max-width: 500px;
+}
+.home-text h1 span {
+ color: #38bdf8;
+}
+
+/* SECTIONS */
+section {
+ padding: 50px 20px;
+ text-align: center;
+}
+.box {
+ background: #020617;
+ padding: 20px;
+ margin: 20px auto;
+ border-radius: 10px;
+ width: 80%;
+ transition: 0.3s;
+}
+.box:hover {
+ transform: translateY(-5px);
+ box-shadow: 0 0 15px #38bdf8;
+}
+
+/* PROJECTS */
+.projects {
+ display: flex;
+ justify-content: center;
+ flex-wrap: wrap;
+ gap: 20px;
+}
+.project {
+ background: #020617;
+ padding: 15px;
+ width: 250px;
+ border-radius: 10px;
+ transition: 0.3s;
+}
+.project:hover {
+ transform: scale(1.05);
+ box-shadow: 0 0 10px #38bdf8;
+}
+
+/* CONTACT */
+form {
+ display: flex;
+ flex-direction: column;
+ max-width: 300px;
+ margin: auto;
+}
+input, textarea {
+ margin: 8px 0;
+ padding: 10px;
+ border-radius: 5px;
+ border: none;
+}
+button {
+ padding: 10px;
+ background: #38bdf8;
+ border: none;
+ cursor: pointer;
+}
+
+/* MOBILE */
+@media(max-width:700px){
+ .home {
+ flex-direction: column;
+ text-align: center;
+ }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav>
+ <ul>
+ <li><a href="#">Home</a></li>
+ <li><a href="#about">About</a></li>
+ <li><a href="#education">Education</a></li>
+ <li><a href="#skills">Skills</a></li>
+ <li><a href="#projects">Projects</a></li>
+ <li><a href="#contact">Contact</a></li>
+ </ul>
+</nav>
+
+<!-- HOME -->
+<section class="home">
+ <div class="flip-card">
+  <div class="flip-inner">
+
+    <!-- FRONT -->
+    <div class="flip-front">
+      <img src="C:\Users\pranj\Downloads\PranjalShelke.jpeg" alt="My Photo">
+    </div>
+
+    <!-- BACK -->
+    <div class="flip-back">
+      <h3>Pranjal Shelke</h3>
+      <p>Information Technology Engineering Student</p>
+    </div>
+
+  
+ <div class="home-text">
+ <h1>Hello, I'm <span>Pranjal Shelke</span></h1>
+ <p>First-year Information Technology Engineering student passionate about learning, creativity, and innovation.</p>
+ </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+ <h2>About Me</h2>
+ <div class="box">
+ <p>I am a Information Technology Engineering student with interest in programming and software development.</p>
+ <p>I enjoy improving my skills and learning new technologies.</p>
+ </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+ <h2>Education</h2>
+ <div class="box">
+ <ul>
+ <li>10th: 83.60%</li>
+ <li>12th: 73.17%</li>
+ <li>B.Tech Information Technology Engineering (Pursuing)</li>
+ </ul>
+ </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+ <h2>Skills</h2>
+ <div class="box">
+ <ul>
+ <li>data visualisation</li>
+ <li>discrete structure</li>
+ <li>python language</li>
+ <li>Communication</li>
+ <li>c language</li>
+ </ul>
+ </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+ <h2>Projects</h2>
+ <div class="projects">
+
+ <div class="project">
+ <h3>data visualisation – RL Calculation</h3>
+ <p>Performed hospital management system practical.</p>
+ </div>
+
+ <div class="project">
+ <h3>python language</h3>
+ <p>Created engineering base python programs.</p>
+ </div>
+
+ <div class="project">
+ <h3>Math Applications</h3>
+ <p>Applied integration in engineering problems.</p>
+ </div>
+
+ </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+ <h2>Contact Me</h2>
+ <div class="box">
+ <p><b>Email:</b> pranjalshelke16@gmail.com</p>
+ <form>
+ <input type="text" placeholder="Your Name">
+ <input type="email" placeholder="Your Email">
+ <textarea placeholder="Message"></textarea>
+ <button>Send</button>
+ </form>
+ </div>
+</section>
+
+</body>
+</html>
